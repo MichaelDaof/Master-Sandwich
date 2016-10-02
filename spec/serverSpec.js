@@ -16,7 +16,7 @@ var users = require('./testData')
 var clearUserTable = function(done){
   User.remove({}, done)
 }
-describe('Local #Database', function(){
+describe('#Database', function(){
 
   afterEach(clearUserTable)
 
@@ -48,7 +48,7 @@ describe('Local #Database', function(){
 
 
 
-describe('Local #API', function (){
+describe('#API', function (){
 
   after(clearUserTable)
 
@@ -74,8 +74,8 @@ describe('Local #API', function (){
       request(app)
       .post('/api/signin')
       .send(users.jack)
-      // TODO: Remove jwt token test for live servers
-      .expect(200, {userid: jwt.encode(user, 'secret')})
+      // tokenization testing local dev
+      .expect(200/*, {userid: jwt.encode(user, '**secret**')}*/)
       .end(done)
     })
   })
