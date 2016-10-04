@@ -13,14 +13,6 @@ import MyAdventures from '../MyAdventures/myAdventuresContainer';
 import MapScreen from './MapScreen'
 
 var AllAdventureDetail = function (props) {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     riddles: props.adven,
-  //     id: props.adven._id,
-  //     mapview: false
-  //   };
-  // }
 
   var advenAccept = function(){
     AsyncStorage.getItem('id_token')
@@ -106,8 +98,6 @@ var style = {
     color: 'white',
     alignSelf: 'center'
   },
-  // imported from MyAdventuresDetail
-  // **USING**
   listStyle : {
     borderWidth: 1,
     borderRadius: 2,
@@ -118,20 +108,11 @@ var style = {
     marginTop: 5,
     padding: 5,
   },
-  // **USING**
   loc : {
     fontSize: 10,
     fontFamily: 'Helvetica',
     fontWeight: 'bold',
     color: 'gray'
-  },
-  title: {
-    padding: 5,
-    marginLeft: 5,
-    marginRight: 5,
-    fontWeight: 'bold',
-    elevation: 1,
-    flexDirection: 'column'
   }
 }
 
