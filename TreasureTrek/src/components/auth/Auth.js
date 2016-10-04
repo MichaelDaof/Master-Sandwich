@@ -170,29 +170,30 @@ var Auth = React.createClass({
 
   render() {
     return (
-      <Image style={{ flex: 1, resizeMode: 'cover'}}
-      source={require('../../resources/land-blue.png')}>
-        <View style={styles.container}>
-          <ActivityIndicator
-          animating={this.state.waiting}
-          size = "large"
-          />
-          <View>
+      <Image source={require('../../resources/land-blue.png')}>
+
+          <View style={styles.container}>
+            <ActivityIndicator
+            animating={this.state.waiting}
+            size = "large"
+            />
+            <View>
               <Form
-                  ref="form"
-                  type={Person}
-                  options={options}
+                ref="form"
+                type={Person}
+                options={options}
               />
-          </View>
-          <View>
+            </View>
+            <View>
               <TouchableHighlight style={styles.button} onPress={this.userSignUp} underlayColor='#99d9f4'>
-                  <Text style={styles.buttonText}>Signup</Text>
+                <Text style={styles.buttonText}>Signup</Text>
               </TouchableHighlight>
               <TouchableHighlight style={styles.button} onPress={this.userLogin} underlayColor='#99d9f4'>
-                  <Text style={styles.buttonText}>Login</Text>
+                <Text style={styles.buttonText}>Login</Text>
               </TouchableHighlight>
+            </View>
           </View>
-        </View>
+
       </Image>
     );
   }
@@ -223,8 +224,11 @@ const styles = {
     borderWidth: 1
   },
   container: {
+    position: 'absolute',
+    right: 0,
+    left: 0,
+    bottom: 10,
     justifyContent: 'center',
-    marginTop: 340,
     padding: 20,
     backgroundColor: 'rgba(52,52,52,0)'
   },
