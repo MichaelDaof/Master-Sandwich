@@ -43,6 +43,7 @@ mockery.registerMock('./select')
 mockery.registerMock('./datepicker')
 // aws credentials
 mockery.registerMock('./credentials')
+mockery.registerMock('../../resources/red-arrow.png')
 const React = require('react-native')
 React.NavigationExperimental = {
   AnimatedView: React.View
